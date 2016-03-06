@@ -4,8 +4,6 @@
 #ifndef _KNOB_HPP_
 #define _KNOB_HPP_
 
-#include "hardware.h"
-
 /// @brief Class supporting a rotary encoder with push button
 class CKnob {
 public:

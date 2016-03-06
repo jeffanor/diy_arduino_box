@@ -2,7 +2,6 @@
 /// @brief Quadrature decoding of a rotary encoder with push button
 
 #include "knob.hpp"
-#include "ST7735.hpp"
 
 CKnob CKnob::s_singleton;
 
