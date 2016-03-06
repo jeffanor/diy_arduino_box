@@ -25,7 +25,6 @@ MIT license, all text above must be included in any redistribution
 #include "Arduino.h"
 #include "Print.h"
 #include <include/pio.h>
-#include "hardware.h"
 
 /// @brief Compose an attribute byte from 4-bit foreground and background palette indices
 #define ATTR(fg,bg)     ((fg&0x0f) | ((bg&0x0f)<<4))
@@ -124,7 +123,6 @@ public:
     /// @brief Draw a horizontal line in a solid RGB565 color
     void drawHLine (coord_t x, coord_t y, coord_t w, color_t color);
 
-
     /// @brief Outline a rectangle in a solid RGB565 color
     void drawRect (coord_t x, coord_t y, coord_t w, coord_t h, color_t color);
 
@@ -133,9 +131,6 @@ public:
 
     /// @brief Draw a string using the 6x8 bitmap font given foreground and background colors
     void drawString (coord_t x, coord_t y,  char *c, color_t color, color_t bg);
-
-    /// @brief Draw a bitmap of RGB332 colors from memory
-    // void drawBitmap332 (coord_t x, coord_t y, coord_t w, coord_t h, uint8_t *bitmap);
 
 protected:
     Adafruit_ST7735 ();
